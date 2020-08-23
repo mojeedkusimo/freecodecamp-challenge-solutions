@@ -14,5 +14,3 @@ let palindrome = (str) => {
     }
 }
 
-
-console.log(palindrome('_eye'));
