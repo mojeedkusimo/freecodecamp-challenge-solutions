@@ -16,7 +16,7 @@ let convertToRoman = (num) => {
         let romanHundreds = hundreds[stringNum[stringNum.length-3]];
         let romanThousands = thousands[stringNum[stringNum.length-4]];
 
-        let romanValue = romanThousands + romanHundreds + romanTens + romanUnits
+        let romanValue = romanThousands + romanHundreds + romanTens + romanUnits;
     
         return romanValue;    
     }

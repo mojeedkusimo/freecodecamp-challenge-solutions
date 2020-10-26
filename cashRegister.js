@@ -1,183 +1,92 @@
 let checkCashRegister = (price, cash, cid) => {
-
-    let diff = cash - price;
-
-    let currencyObject = {
-        penny: {
-            unit: "PENNY",
-            unitValue: 0.01,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[0][1]
-        },
-        nickel: {
-            unit: "NICKEL",
-            unitValue: 0.05,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[1][1]
-        },
-        dime: {
-            unit: "DIME",
-            unitValue: 0.1,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[2][1]
-        },
-        quarter: {
-            unit: "QUARTER",
-            unitValue: 0.25,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[3][1]
-        },
-        oneDollar: {
-            unit: "ONE",
-            unitValue: 1,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[4][1]
-        },
-        fiveDollars: {
-            unit: "FIVE",
-            unitValue: 5,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[5][1]
-        },
-        tenDollars: {
-            unit: "TEN",
-            unitValue: 10,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[6][1]
-        },
-        twentyDollars: {
-            unit: "TWENTY",
-            unitValue: 20,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[7][1]
-        },
-        oneHundredDollars: {
-            unit: "ONE HUNDRED",
-            unitValue: 100,
-            numberOfCurrency() {
-                return this.totalValue/this.unitValue;
-            },
-            totalValue: cid[8][1]
-        },
-        totalCID() {
-            return parseFloat((this.penny.totalValue + this.nickel.totalValue + this.dime.totalValue + this.quarter.totalValue + this.oneDollar.totalValue + this.fiveDollars.totalValue + this.tenDollars.totalValue + this.twentyDollars.totalValue + this.oneHundredDollars.totalValue).toFixed(2));
-        }
-    }
-
-    // console.log(diff);
-    // console.log(currencyObject.totalCID());
-    // let cidChange = [['ONE HUNDRED'],['TWENTY'],['TEN'],['FIVE'],['ONE'],['QUARTER'],['DIME'],['NICKEL'],['PENNY']];
-
-    if ( currencyObject.totalCID() < (diff) ) {
-        return { status: "INSUFFICIENT_FUNDS", change: [] }
-    }
-    else if ( currencyObject.totalCID() === (diff) ) {
-        return { status: "CLOSED", change: cid }
-    }
-    else if ( currencyObject.totalCID() > (diff) ) {
-        return { status: "OPEN", change: 'Not Calculated yet' }
-        // return 'Solution not ready yet';
-    }
-
-
-    for (let i = diff; i > 0.00; i--) {
-        // for (let j = 0; j < cid.length; j++) {
-        //     for(let k = 0; k < cid[j].length; k++) {
-        //         if (cid[j][k] > i) {
-        //             i - cid[j][k]
-        //             cid[j][k] = cid[j][k] - currencyObject.oneHundredDollars.unitValue;
-        //         }
-        //     }
-        // }
-        // if (i < 0){break};
-        // console.log(i);
-        // i--;
-        if ( i > currencyObject.oneHundredDollars.totalValue ) {
-            // console.log('This is for $100 - ' + currencyObject.oneHundredDollars.totalValue);
-            // console.log('This is for diff - ' + i);
-             i - currencyObject.oneHundredDollars.unitValue;
-            // console.log('This is for minus - ' + minus);
-
-            currencyObject.oneHundredDollars.totalValue = currencyObject.oneHundredDollars.totalValue - currencyObject.oneHundredDollars.unitValue;
-            
-        }
-        else if (i > currencyObject.twentyDollars.totalValue ) {
-            // console.log('This is for $20 - ' + currencyObject.twentyDollars.totalValue);
-            // console.log('This is for diff2 - ' + i);
-            diff = i - currencyObject.twentyDollars.unitValue + 1;
-            currencyObject.twentyDollars.totalValue = currencyObject.twentyDollars.totalValue - currencyObject.twentyDollars.unitValue;
-        }
-        else if (i > currencyObject.tenDollars.totalValue ) {
-            i - currencyObject.tenDollars.unitValue;
-            currencyObject.tenDollars.totalValue = currencyObject.tenDollars.totalValue - currencyObject.tenDollars.unitValue;
-        }
-        else if ( i > currencyObject.fiveDollars.totalValue ) {
-            i - currencyObject.fiveDollars.unitValue;
-            currencyObject.fiveDollars.totalValue = currencyObject.fiveDollars.totalValue - currencyObject.fiveDollars.unitValue;
-        }
-        else if (i > currencyObject.oneDollar.totalValue ) {
-            i - currencyObject.oneDollar.unitValue;
-            currencyObject.oneDollar.totalValue = currencyObject.oneDollar.totalValue - currencyObject.oneDollar.unitValue;
-        }
-        else if (i > currencyObject.quarter.totalValue ) {
-            i - currencyObject.quarter.unitValue;
-            currencyObject.quarter.totalValue = currencyObject.quarter.totalValue - currencyObject.quarter.unitValue;
-        }
-        else if (i > currencyObject.dime.totalValue ) {
-            i - currencyObject.dime.unitValue;
-            currencyObject.dime.totalValue = currencyObject.dime.totalValue - currencyObject.dime.unitValue;
-        }
-        else if (i > currencyObject.nickel.totalValue ) {
-            i - currencyObject.nickel.unitValue;
-            currencyObject.nickel.totalValue = currencyObject.nickel.totalValue - currencyObject.nickel.unitValue;
-        }
-        else if (i > currencyObject.penny.totalValue ) {
-            i - currencyObject.penny.unitValue;
-            currencyObject.penny.totalValue = currencyObject.penny.totalValue - currencyObject.penny.unitValue;
-        }
-    }
-
-    cidChange[0].push(currencyObject.oneHundredDollars.totalValue);
-    cidChange[1].push(currencyObject.twentyDollars.totalValue);
-    cidChange[2].push(currencyObject.tenDollars.totalValue);
-    cidChange[3].push(currencyObject.fiveDollars.totalValue);
-    cidChange[4].push(currencyObject.oneDollar.totalValue);
-    cidChange[5].push(currencyObject.quarter.totalValue);
-    cidChange[6].push(currencyObject.dime.totalValue);
-    cidChange[7].push(currencyObject.nickel.totalValue);
-    cidChange[8].push(currencyObject.penny.totalValue);
-
-    // console.log(diff);
-    // console.log(currencyObject.totalCID());
-    // console.log(cidChange);
-
-
-}
-
-console.log(checkCashRegister(2,337.41,[
-    ["PENNY", 1.01],
-    ["NICKEL", 2.05],
-    ["DIME", 3.1],
-    ["QUARTER", 4.25],
-    ["ONE", 90],
-    ["FIVE", 55],
-    ["TEN", 20],
-    ["TWENTY", 60],
-    ["ONE HUNDRED", 100]
-  ]));
+  // Get the change required for the purchase
+  // Evaluate the cid to a single number value
+  // Check evaluated cid with change
+      // if evaluated cid is less than change
+          // return { status: "INSUFFICIENT_FUNDS", change: [] }
+      // if evaluated cid is equal to change
+          // return { status: "CLOSED", change: changeFromCID }
+      // else return { status: "OPEN", change: changeFromCID }
+  
+      let diff = cash - price;
+      let evaluatedCID = cid.reduce((acc, val) => {
+              return acc + val[1];
+      }, 0);
+      let CIDResponse = { status: "", change: [] };
+      let CIDChange = [
+          ["ONE HUNDRED", 0],
+          ["TWENTY", 0],
+          ["TEN", 0],
+          ["FIVE", 0],
+          ["ONE", 0],
+          ["QUARTER", 0],
+          ["DIME", 0],
+          ["NICKEL", 0],
+          ["PENNY", 0]
+      ];
+  
+      let currencyValue = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
+      let currencyValueInCID = [];
+      let noOfCurrency = [];
+      let noOfCurrencyChange = Array(9).fill(0);
+  
+      // Get the number each unit value of currency in the cid received
+      cid.reverse().forEach((val,index) => {
+          noOfCurrency.push(Number(((val[1])/currencyValue[index]).toFixed()));
+          if (val[1] === 0) {
+              currencyValueInCID.push(0)
+          } else {
+              currencyValueInCID.push(Number(((val[1])/noOfCurrency[index]).toFixed(2)));
+          }
+      });
+      // console.log(`Number of unit value: ${noOfCurrency}`);
+      // console.log(`CID provided ${currencyValueInCID}`);
+      // console.log(`Change: ${diff}`)
+  
+      // Decrease the number each unit value of currency in the cid on every deduction of price and increase the corresponding number of unit of change to be given
+      let changeToGive = diff;
+      currencyValueInCID.forEach((val, index, array) => {
+          if (val !== 0 && Number(changeToGive.toFixed(2)) >= val && noOfCurrency[index] > 0) {
+              for (let i = 0; i < noOfCurrency[index]; i++) {
+                  if (Number(changeToGive.toFixed(2)) >= val) {
+                      changeToGive = Number(changeToGive.toFixed(2)) - val;
+                      noOfCurrencyChange[index] += 1;
+                  }
+              }
+          }
+      });
+  
+      // Calculate the total value of each currency unit to be given as change 
+      CIDChange.forEach((val, index) => {
+          val[1] = Number((currencyValue[index] * noOfCurrencyChange[index]).toFixed(2));
+      });
+  
+      // Removing any total value of currency unit equal to zero
+      let changeWithMoreCIDLeft = CIDChange.reduce((acc, val) => {
+          if (val[1] !== 0) {
+            acc.push(val);   
+          }
+          return acc;
+      }, []);
+  
+      // Update response object based on the change to be given
+      if ( evaluatedCID < diff || changeToGive > 0  ) {
+          CIDResponse.status = "INSUFFICIENT_FUNDS";
+          return CIDResponse;
+      } else if ( evaluatedCID === diff ) {
+          CIDResponse.status = "CLOSED";
+          CIDResponse.change = cid.reverse();
+          return CIDResponse;
+  
+      } else {
+          CIDResponse.status = "OPEN";
+          CIDResponse.change = changeWithMoreCIDLeft;
+          return CIDResponse;
+      }
+  }
+  
+  
+  // checkCashRegister(206, 1059, [["PENNY", 0], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 1000]])
+  
+  
+  checkCashRegister(3.26, 100, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]])
