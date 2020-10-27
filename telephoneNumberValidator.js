@@ -17,4 +17,4 @@ let telephoneCheck = (str) => {
     }
 }
 
-console.log(telephoneCheck('1 333 333 3333'));
+console.log(telephoneCheck('3333333333'));
