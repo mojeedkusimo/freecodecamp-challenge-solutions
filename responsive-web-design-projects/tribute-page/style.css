@@ -33,7 +33,7 @@ figure {
 
 img {
   max-width:100%;
-  /* border: solid 2px red; */
+  display: block;
 }
 
 figcaption {
