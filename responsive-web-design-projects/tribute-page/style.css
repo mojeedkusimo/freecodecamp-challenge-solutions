@@ -29,6 +29,7 @@ main h1+p {
 figure {
     background-color: white;
     padding: 0px 20%;
+    text-align: center;
 }
 
 img {
