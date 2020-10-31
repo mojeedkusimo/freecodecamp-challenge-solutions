@@ -8,23 +8,26 @@
 </head>
 <body>
     <main>
-        <section id="header">
+        <header id="header">
+            <img id="header-img" src="https://cdn.freebiesupply.com/images/large/2x/google-logo-transparent.png" width="50px" height="20px" alt="">
             <div class="logo">Original Trombones</div>
             <div class="flex-child"></div>
             <div class="flex-child"></div>
             <div class="flex-child"></div>
-            <div class="nav">
+            <nav id="nav-bar">
                 <ul>
-                    <li><a href="#services">Features</a></li>
-                    <li><a href="#video">How it Works</a></li>
-                    <li><a href="#tickets">Pricing</a></li>
+                    <li><a href="#services" class="nav-link">Features</a></li>
+                    <li><a href="#video" class="nav-link">How it Works</a></li>
+                    <li><a href="#tickets" class="nav-link">Pricing</a></li>
                 </ul>
-            </div>
-        </section>
+            </nav>
+        </header>
         <section id="search">
             <h1>Handcrafted, home-made masterpieces</h1>
-            <input type="email" placeholder="Enter your email address"><br>
-            <input type="button" value="GET STARTED">
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input id="email" type="email" name="email" placeholder="Enter your email address"><br>
+                <input type="submit" id="submit" value="GET STARTED">    
+            </form>
         </section>
         <section id="services">
             <div class="flex-child"></div>
@@ -56,8 +59,8 @@
                         <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
                     </div>
                 </div>
-                <div id="video">
-                    <iframe width="600px" height="350px" src="https://www.youtube.com/embed/y8Yv4pnO7qc">
+                <div id="video-frame">
+                    <iframe id="video" width="100%" height="350px" src="https://www.youtube.com/embed/y8Yv4pnO7qc">
                     </iframe>
                 </div>
                 <div id="tickets">

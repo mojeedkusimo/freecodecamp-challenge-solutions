@@ -11,7 +11,7 @@
 body {
     background-color: #EEEEEE;
 }
-main section#header {
+main header#header {
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -21,19 +21,19 @@ main section#header {
     background-color: #EEEEEE;
 }
 
-main section#header div.logo {
+main header#header div.logo {
     margin: 0 55px;
     font-size: 27px;
     font-weight: 700;
 }
 
 
-main section#header div.nav ul {
+main header#header nav#nav-bar ul {
     display: flex;
     margin-top: 10px;
 }
 
-main section#header div.nav ul li a {
+main header#header nav#nav-bar ul li a {
     color: black;
     text-decoration: none;
     margin: 20px 35px;
@@ -51,16 +51,11 @@ main section#search input[type=email] {
     width: 250px;
 }
 
-main section#search input[type=button] {
+main section#search form input[type=submit] {
     background-color: #F1C40F;
     padding: 5px;
     font-weight: 900;
     border: hidden;
-}
-
-section#services, section#services div.flex-child div#tickets {
-    display: flex;
-    justify-content: space-between;
 }
 
 section#services div.flex-child:not(:nth-child(2)) {
@@ -84,7 +79,7 @@ section#services div.flex-child div.services-desc div.info {
     margin-left: 50px;
 }
 
-section#services div.flex-child div#video {
+section#services div.flex-child div#video-frame {
     text-align: center;
     margin: 50px 0;
 }
@@ -92,7 +87,8 @@ section#services div.flex-child div#video {
 section#services div.flex-child div#tickets div.available-tickets {
     border: 1px solid black;
     text-align: center;
-    width: 30%;
+    width: 50%;
+    margin: 30px 0;
     border-radius: 5px;
 }
 
@@ -147,11 +143,17 @@ section#services div.flex-child div.footer div.copyright {
 }
 
 @media screen and (max-width: 742px) {
-    main section#header div.nav ul {
+    section#services, section#services div.flex-child div#tickets div.available-tickets {
+        display: block;
+        text-align: center;
+        text-align: -webkit-center;
+    }
+    
+    main header#header nav#nav-bar ul {
         display: block;
     }
 
-    main section#header {
+    main header#header {
         display: block;
         text-align: center;
     }
@@ -164,15 +166,33 @@ section#services div.flex-child div.footer div.copyright {
         display: none;
     }
 
-    section#services div.flex-child div.services-desc {
+    section#services div.flex-child div.services-desc div.info {
         display: block;
         text-align: center;
     }
 
+    section#services div.flex-child div.services-desc {
+        /* display: block; */
+        text-align: center;
+        margin-right: 40px;
+    }
+
 
 }
-section#services, section#services div.flex-child div#tickets div.available-tickets {
-    display: block;
-    text-align: center;
-    border: 2px solid salmon;
+
+@media screen and (min-width: 760px) {
+    section#services, section#services div.flex-child div#tickets {
+        display: flex;
+        justify-content: space-between;
+        /* width: 30%; */
+        /* margin: 0px 0; */
+         /* display: block;
+         text-align: center; */
+    }
+
+    section#services div.flex-child div#tickets div.available-tickets {
+        width: 30%;
+        margin: 0px 0;
+        border-radius: 5px;
+    }
 }
