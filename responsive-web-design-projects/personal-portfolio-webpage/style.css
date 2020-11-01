@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+main header nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main header {
+    background-color: rgb(190, 49, 68);
+    padding: 20px;
+}
+
+main header nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    margin-right: 40px;
+}
+
+* li {
+    list-style-type: none;
+}
