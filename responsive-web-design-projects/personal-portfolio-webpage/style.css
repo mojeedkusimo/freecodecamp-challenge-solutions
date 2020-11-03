@@ -3,8 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    color: white;
 }
 
+html, body {
+    height: 100%;
+}
 main header nav ul {
     display: flex;
     justify-content: flex-end;
@@ -12,16 +16,135 @@ main header nav ul {
 
 main header {
     background-color: rgb(190, 49, 68);
-    padding: 20px;
+    /* padding: 20px; */
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 main header nav ul li a{
     text-decoration: none;
-    color: white;
     font-weight: 700;
-    margin-right: 40px;
+    /* margin-right: 40px; */
+    display: block;
+    text-align: center;
+    padding: 30px;
+    font-size: 25px;
+}
+
+main header nav ul li {
+    text-align: center;
+    display: block;
+}
+
+main header nav ul li:hover {
+    background-color: rgb(69, 86, 125);
 }
 
 * li {
     list-style-type: none;
+}
+
+main section#About {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2em;
+    padding: 300px 0;
+}
+
+main section#About p i{
+    color: rgb(190, 49, 68);
+}
+
+section#Work {
+    background-color: #45567D;
+}
+
+section#Work div#title {
+    background-color: #45567D;
+    display: flex;
+    justify-content: center;
+}
+
+section#Work div#title h2 {
+    text-align: center;
+    padding-top: 70px;
+    border-bottom: 2px solid white;
+    width: 30%;
+}
+
+section#Work div#projects-desc {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section#Work div#projects-desc div.img img {
+    width: 350px;
+    padding-top: 50px;
+}
+
+section#Work div#projects-desc div.img p {
+    text-align: center;
+    background-color: #303841;
+    padding: 20px 0;
+    margin-top: -5px;
+}
+
+section#Work div#projects-desc div.img p span.para-deco {
+    color: rgb(190, 49, 68);
+    font-size: 23px;
+    /* display: none; */
+}
+
+section#Work div#show-all {
+    /* display: block; */
+    text-align: center;
+    padding: 30px 0;
+    text-decoration: none;
+}
+
+section#Work div#show-all a {
+    margin: 30px 0;
+    text-decoration: none;
+    padding: 15px;
+    background-color: #303841;
+    display: inline-block;
+
+}
+
+section#Contact {
+    text-align: center;
+    background-color: #303841;
+    padding: 80px 0;
+}
+
+section#Contact h2{
+    font-size: 60px;
+    padding: 10px 0;
+}
+
+section#Contact ul#contact-links{
+    display: flex;
+    justify-content: space-around;
+    padding: 40px ;
+    width: 70%;
+
+}
+
+section#Contact div#contact-links-block {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+section#Contact div#contact-links-block ul#contact-links li a{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
 }
