@@ -43,7 +43,7 @@ main header nav ul li:hover {
     list-style-type: none;
 }
 
-main section#About {
+main section#welcome-section {
     background-color: black;
     height: 100vh;
     width: 100%;
@@ -54,7 +54,7 @@ main section#About {
     font-size: 2em;
 }
 
-main section#About p i{
+main section#welcome-section p i{
     color: rgb(190, 49, 68);
 }
 
@@ -136,18 +136,18 @@ section#projects div#show-all a:hover {
     border-radius: 10px;
 }
 
-section#Contact {
+section#contact {
     text-align: center;
     background-color: #303841;
     padding: 65px 0;
 }
 
-section#Contact h2{
+section#contact h2{
     font-size: 60px;
     padding: 10px 0;
 }
 
-section#Contact ul#contact-links{
+section#contact ul#contact-links{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -156,23 +156,29 @@ section#Contact ul#contact-links{
 
 }
 
-section#Contact div#contact-links-block {
+section#contact div#contact-links-block {
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
-section#Contact div#contact-links-block ul#contact-links li a{
+section#contact div#contact-links-block ul#contact-links li a{
     font-weight: 600;
     font-size: 20px;
     text-decoration: none;
     padding: 20px;
 }
 
-section#Contact div#contact-links-block ul#contact-links li.social-media-links a:hover{
+section#contact div#contact-links-block ul#contact-links li.social-media-links a:hover{
     color:  rgb(190, 49, 68) ;
 }
 
-section#Contact div#contact-links-block ul#contact-links li.social-media-links a{
+section#contact div#contact-links-block ul#contact-links li.social-media-links a{
     display: block;
+}
+@media screen and (max-width: 760px) {
+    section#contact p i{
+        color: rgb(190, 49, 68);
+
+    }
 }
