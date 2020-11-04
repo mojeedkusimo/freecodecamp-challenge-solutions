@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+}
+main header nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+main header {
+    background-color: rgb(190, 49, 68);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+main header nav ul li a{
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 23px;
+}
+
+main header nav ul li {
+    text-align: center;
+    display: block;
+}
+
+main header nav ul li:hover {
+    background-color: rgb(69, 86, 125);
+}
+
+* li {
+    list-style-type: none;
+}
+
+main section#About {
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+main section#About p i{
+    color: rgb(190, 49, 68);
+}
+
+section#projects {
+    background-color: #45567D;
+}
+
+section#projects div#title {
+    background-color: #45567D;
+    display: flex;
+    justify-content: center;
+}
+
+section#projects div#title h2 {
+    text-align: center;
+    padding-top:90px;
+    border-bottom: 2px solid white;
+    width: 50%;
+    font-size: 35px;
+}
+
+section#projects div.projects-desc {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section#projects div.projects-desc:nth-child(3) {
+    display: none;
+}
+
+section#projects div.projects-desc div.img img {
+    width: 350px;
+    margin-top: 50px;
+}
+
+section#projects div.projects-desc div.img a {
+    text-decoration: none;
+}
+
+section#projects div.projects-desc div.img p {
+    text-align: center;
+    background-color: #303841;
+    padding: 20px 0;
+    margin-top: -5px;
+    font-size: 20px;
+}
+
+section#projects div.projects-desc div.img p span.project-span {
+    color: rgb(190, 49, 68);
+    font-size: 23px;
+    font-weight: 700;
+    visibility: hidden;
+}
+
+section#projects div.projects-desc div.img p span.project-span span.project-text {
+    color: white;
+}
+
+
+section#projects div#show-all {
+    text-align: center;
+    padding: 30px 0;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+section#projects div#show-all a {
+    margin: 35px 0;
+    text-decoration: none;
+    padding: 15px;
+    background-color: #303841;
+    display: inline-block;
+
+}
+
+section#projects div#show-all a:hover {
+    background-color:  rgb(190, 49, 68);
+    border-radius: 10px;
+}
+
+section#Contact {
+    text-align: center;
+    background-color: #303841;
+    padding: 65px 0;
+}
+
+section#Contact h2{
+    font-size: 60px;
+    padding: 10px 0;
+}
+
+section#Contact ul#contact-links{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 40px ;
+    width: 70%;
+
+}
+
+section#Contact div#contact-links-block {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+section#Contact div#contact-links-block ul#contact-links li a{
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 20px;
+}
+
+section#Contact div#contact-links-block ul#contact-links li.social-media-links a:hover{
+    color:  rgb(190, 49, 68) ;
+}
+
+section#Contact div#contact-links-block ul#contact-links li.social-media-links a{
+    display: block;
+}

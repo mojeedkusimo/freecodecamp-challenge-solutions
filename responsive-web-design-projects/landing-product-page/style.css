@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* li {
+    list-style-type: none ;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+main header#header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top:0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #EEEEEE;
+}
+
+main header#header div.logo {
+    margin: 0 55px;
+    font-size: 27px;
+    font-weight: 700;
+}
+
+
+main header#header nav#nav-bar ul {
+    display: flex;
+    margin-top: 10px;
+}
+
+main header#header nav#nav-bar ul li a {
+    color: black;
+    text-decoration: none;
+    margin: 20px 35px;
+}
+
+main section#search {
+    text-align: center;
+    margin: 60px 0;
+}
+
+
+main section#search input[type=email] {
+    margin: 20px 0;
+    padding: 3px;
+    width: 250px;
+}
+
+main section#search form input[type=submit] {
+    background-color: #F1C40F;
+    padding: 5px;
+    font-weight: 900;
+    border: hidden;
+}
+
+section#services div.flex-child:not(:nth-child(2)) {
+    width: 20%;
+}
+
+section#services div.flex-child div.services-desc {
+    display: flex;
+    justify-content: center;
+    line-height: 23px;
+    margin: 30px 0;
+}
+
+section#services div.flex-child div.services-desc div.icon img {
+    width: 90px;
+    padding: 20px;
+    margin-top: -20px;
+}
+
+section#services div.flex-child div.services-desc div.info {
+    margin-left: 50px;
+}
+
+section#services div.flex-child div#video-frame {
+    text-align: center;
+    margin: 50px 0;
+}
+
+section#services div.flex-child div#tickets div.available-tickets {
+    border: 1px solid black;
+    text-align: center;
+    width: 50%;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+section#services div.flex-child div#tickets div.available-tickets div.title {
+    padding: 10px;
+    background-color: #DDDDDD;
+    font-weight: 700;
+}
+
+section#services div.flex-child div#tickets div.available-tickets h3 {
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+section#services div.flex-child div#tickets div.available-tickets ul li {
+    margin: 5px 0;
+}
+
+section#services div.flex-child div#tickets div.available-tickets button {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #F1C40F;
+    border: hidden;
+}
+
+section#services div.flex-child div.footer {
+    background-color:  #DDDDDD;
+    height: 70px;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+section#services div.flex-child div.footer ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+section#services div.flex-child div.footer ul li a{
+    color: black;
+    text-decoration: none;
+}
+
+section#services div.flex-child div.footer ul li:nth-child(2) {
+    margin: 0 30px;
+}
+
+section#services div.flex-child div.footer div.copyright {
+    text-align: right;
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 742px) {
+    section#services, section#services div.flex-child div#tickets div.available-tickets {
+        display: block;
+        text-align: center;
+        text-align: -webkit-center;
+    }
+    
+    main header#header nav#nav-bar ul {
+        display: block;
+    }
+
+    main header#header {
+        display: block;
+        text-align: center;
+    }
+
+    main section#search {
+        margin-top: 160px;
+    }
+
+    section#services div.flex-child div.services-desc div.icon img {
+        display: none;
+    }
+
+    section#services div.flex-child div.services-desc div.info {
+        display: block;
+        text-align: center;
+    }
+
+    section#services div.flex-child div.services-desc {
+        /* display: block; */
+        text-align: center;
+        margin-right: 40px;
+    }
+
+
+}
+
+@media screen and (min-width: 760px) {
+    section#services, section#services div.flex-child div#tickets {
+        display: flex;
+        justify-content: space-between;
+        /* width: 30%; */
+        /* margin: 0px 0; */
+         /* display: block;
+         text-align: center; */
+    }
+
+    section#services div.flex-child div#tickets div.available-tickets {
+        width: 30%;
+        margin: 0px 0;
+        border-radius: 5px;
+    }
+}

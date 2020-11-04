@@ -10,8 +10,12 @@ body {
 
 main {
     background-color: #EEEEEE;
-    text-align: center;
     padding: 10px 10px;
+    border-radius: 5px;
+}
+
+main:not(section) {
+    text-align: center;
 }
 
 main h1 {
@@ -27,6 +31,12 @@ main h1+p {
 figure {
     background-color: white;
     padding: 0px 20%;
+    text-align: center;
+}
+
+img {
+  max-width:100%;
+  display: block;
 }
 
 @media only screen and (max-width: 992px) {
@@ -48,4 +58,38 @@ figcaption {
 }
 main h3 {
     margin: 30px 0px;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    line-height: 25px;
+}
+
+main section ul li {
+    margin: 15px 0px;
+}
+
+/* main section ul {
+    background-color: red;
+} */
+
+main section div.side-divs {
+    width: 30px;
+    height: 10px;
+    background-color: blue;
+}
+
+div.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+section.flex div.flex-child {
+    width: 100%;
+}
+
+blockquote {
+    margin: 15px 0px;
 }

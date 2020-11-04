@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC RWD Project 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header id="header">
+            <img id="header-img" src="https://cdn.freebiesupply.com/images/large/2x/google-logo-transparent.png" width="50px" height="20px" alt="">
+            <div class="logo">Original Trombones</div>
+            <div class="flex-child"></div>
+            <div class="flex-child"></div>
+            <div class="flex-child"></div>
+            <nav id="nav-bar">
+                <ul>
+                    <li><a href="#services" class="nav-link">Features</a></li>
+                    <li><a href="#video" class="nav-link">How it Works</a></li>
+                    <li><a href="#tickets" class="nav-link">Pricing</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="search">
+            <h1>Handcrafted, home-made masterpieces</h1>
+            <form action="https://www.freecodecamp.com/email-submit" id="form">
+                <input id="email" type="email" name="email" placeholder="Enter your email address"><br>
+                <input type="submit" id="submit" value="GET STARTED">    
+            </form>
+        </section>
+        <section id="services">
+            <div class="flex-child"></div>
+            <div class="flex-child">
+                <div class="services-desc">
+                    <div class="icon">
+                        <img src="https://static.vecteezy.com/system/resources/previews/001/188/532/non_2x/fire-icon-png.png">
+                    </div>
+                    <div class="info">
+                        <h2>Premium Materials</h2>
+                        <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+                    </div>
+                </div>
+                <div class="services-desc">
+                    <div class="icon">
+                        <img src="https://image.flaticon.com/icons/png/512/45/45880.png">
+                    </div>
+                    <div class="info">
+                        <h2>Fast Shipping</h2>
+                        <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+                    </div>
+                </div>
+                <div class="services-desc">
+                    <div class="icon">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX///8AAACnp6egoKDy8vJhYWGGhoa1tbXf39+qqqr8/Pzu7u7b29u9vb3j4+N/f3+SkpJPT087OzvMzMzU1NTGxsZ4eHjp6em6uroqKioxMTFUVFQkJCRAQEBtbW3Pz89HR0dbW1sVFRUcHBxmZmaZmZkXFxcLCwvqOu4cAAAEwklEQVR4nO3dbXuiOhAGYFbxBRSqgkWp1rWt6///h6e0S407Q0iQAxOu5/4quvPU1SQIE88DAAAAAAAAAAAAAAAAAAAAAACAAVrM09P2S1TYzf4RMEY2uBe4d/fv7b7LiD4LOqXpPM78B8KFp9XLLyesx4sG+ZZP+74LtzHZWuZLJ32XbG2dWOTzn/sut5GJ8Wcy6rvUxnZmAad91/mAqUG+cN13lQ/5qA/4u+8aH/RSF9CREVDjebifwdJFFzDou7pWpNUBF33X1o5DWJnQzYGeWlUFXPZdWWuqJuIffRfWmorv03nfdbUoYxOu+i6rReyIER65Q9fTUbCLkmI5Pc8Wi/D/4S/MxHMiZtcJOZcwZg58rv7elcM/M5VzY+KIHvbUebXNvNLSx8xhdDCsm8SKwXzAuIQ5OWreealNZUYJyUGHzgttjqwYmIQhSfjafaGNkRk1k5B+lVbO7gTyDRKmNf+VP8esLIs/fY1CS9UpubPUo0OaXlzhbiAzSZiQhCPl0cV0nb9fySF9+lCn1yYJt+QlZrcHT4dOiraTx3YJd+QVbicfT51UbG2fWSWckRf4+SXAp0OlDOewpYSXTsptYmaTkJ6EKhPyiw4R8tAi4Zg8vZye+7K+Q+9EBgmL1ZmfZRk9U1omlHwGblaTcBG8vhyPm3x/eH+jb9Ty77PptFaOmoSjP9pnx84nZNaNd8qEks9QaRPW/kRRJpR8GlWXsL5u1xPWn/713U5oUHY5d6frKjk0CekAT5QJ6bpKjscS+kgoABLqIaEEDyW8IqEEDyV8KxPSs3BytPMeSr5U0SbhcVpYFS7j8SgIZuHAElZftziUhNW/9yJhn5BQhYQyIaEKCWVCQhUSyoSEKiSUCQlVSCgTEqqQUCYkVCGhTEioQkKZkFCFhDIhoQoJZbJJOEm2SVr4e29S/HO7xmCvVNgP/lqMP4NPOPzraZBQBFy5p4eEEiChXnmtvtB7ZL9oEhpcUlkmdPSOEq/+xlDH75kxWDFkjif0znXPdv3OLi+r6yJQJuSaD0mhv8PSr+mk6/49pJ63/cjfqp89gPuAi0fiZZomyXYb0fsRh3Avt4pOAZKqZwtik1DTU0FqW4xft1nJYwm9p06KbeKntd6DnT9iqW0jct8moa4/jdTWtLcu7CYJ6SxO6TEks39L5FklpIuNQH1UXpfvg9pH3yQhXQWqnbC8ME6jIBiPL8WNUdP2rHQuY41YLc8kIe1+oe0aLYxJQjqum/Sol8IkIe2bOOm8zubIWMclpIspF9qzfqNNH7mEdOpd06FeENp7lUvIjHncYRIx7XMD5jCuhYkb7S+5+ciJOS7k9gbaz0Lpn0af3bCC3XKmaglxfd/nm0/rwsukbee13nGjxZ8VPbN/DMnntm1FbELP9Q1YbjYVHy26gHJV5a5IcltA2jlWfi1J/h3NhmYbliFspKNfMji+ndU3fbP8TPCZQ0Obmv3lxJ5XM/VWu9mj4+9izu+/coef5zlibbQFYujutk9PpssEev7bCdeK2Sj7Nro4ME7t1nlxXQ9eYa5Tg6+Yf2TjV4n7BXDy51njjY/9ZRIVGzdbbdPclSCY7aJTLP0kBAAAAAAAAAAAAAAAAAAAAAAAANT7D8VWoLdlZqcbAAAAAElFTkSuQmCC">
+                    </div>
+                    <div class="info">
+                        <h2>Quality Assurance</h2>
+                        <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+                    </div>
+                </div>
+                <div id="video-frame">
+                    <iframe id="video" width="100%" height="350px" src="https://www.youtube.com/embed/y8Yv4pnO7qc">
+                    </iframe>
+                </div>
+                <div id="tickets">
+                    <div class="available-tickets">
+                        <div class="title">TENOR TROMBONE</div>
+                        <h3>$600</h3>
+                        <ul>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum.</li>
+                        </ul>
+                        <button type="submit">SELECT</button>
+                    </div>
+                    <div class="available-tickets">
+                        <div class="title">BASS TROMBONE</div>
+                        <h3>$900</h3>
+                        <ul>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum.</li>
+                        </ul>
+                        <button type="submit">SELECT</button>
+                    </div>
+                    <div class="available-tickets">
+                        <div class="title">VALVE TROMBONE</div>
+                        <h3>$1200</h3>
+                        <ul>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum.</li>
+                            <li>Lorem ipsum dolor.</li>
+                            <li>Lorem ipsum.</li>
+                        </ul>
+                        <button type="submit">SELECT</button>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <ul>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Contract</a></li>
+                    </ul>
+                    <div class="copyright">
+                        Copyright 2016, Original Trombones
+                    </div>
+                </div>
+            </div>
+            <div class="flex-child"></div>
+        </section>
+    </main>
+</body>
+</html>
