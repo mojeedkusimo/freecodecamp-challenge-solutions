@@ -18,7 +18,14 @@ function convertHTML(str) {
     });
   });
 
-    console.log(newStrArr);
+    let result = '';
+
+    newStrArr.forEach((el) => {
+      result += el;
+    });
+
+    console.log(result);
+
 }
   
   convertHTML("Dolce & Gabbana");
