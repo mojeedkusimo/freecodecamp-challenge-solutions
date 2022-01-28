@@ -3,7 +3,7 @@ function sumFibs(num) {
     let FiboArr = [];
     let sum = 0;
 
-    for (let i=0; i<=num; i++) {
+    for (let i=0; i<num; i++) {
         switch (i) {
             case 0:
                 console.log(0);
@@ -11,17 +11,23 @@ function sumFibs(num) {
             case 1:
                 FiboArr.push(1,1);
                 break;
-            case ( i > 1 ) && ( i % 2 === 1):
-                FiboArr.push();
-                break;
             default:
-                console.log(i);
+                FiboArr.push(FiboArr[i-2] + FiboArr[i-1]);
                 break;
         }
     }
 
-    console.log(FiboArr.forEach( el => sum += el ));
-    return num;
+    console.log(FiboArr);
+    FiboArr.forEach( el => {
+        if (!(el % 2 === 0) && (el <= num)) {
+            return sum += el;
+        }
+    } );
+    console.log(sum);
   }
   
-  sumFibs(4);
+  sumFibs(10);
+//   sumFibs(1000);
+//   sumFibs(4000000);
+sumFibs(4)
+sumFibs(75024)
